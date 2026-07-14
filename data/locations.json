@@ -698,27 +698,6 @@
         "grand-central-market",
         "elysian-park-palms"
       ]
-    },
-    "songs": {
-      "title": "By Musical Number",
-      "description": "Locations grouped by the song or scene they belong to, for visitors who want to follow the film's musical structure rather than its geography or plot order.",
-      "order": [
-        "traffic-interchange",
-        "courtyard-apartments",
-        "hollywood-murals",
-        "smoke-house",
-        "warner-bros-backlot",
-        "lighthouse-cafe",
-        "hermosa-pier",
-        "angels-flight",
-        "rialto-theatre",
-        "griffith-observatory",
-        "cathys-corner",
-        "jar-restaurant",
-        "colorado-street-bridge",
-        "grand-central-market",
-        "elysian-park-palms"
-      ]
     }
   }
 }
