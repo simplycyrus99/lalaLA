@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>About · La La L.A.</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description"
+        content="La La L.A. — a location tour of Damien Chazelle's La La Land (2016), built as a Live Museum of Movie Locations.">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/themes/noir.css">
+    <link rel="stylesheet" href="assets/css/themes/technicolor.css">
+    <script>document.documentElement.classList.add('js'); document.documentElement.dataset.theme = localStorage.getItem('lmml-theme') || 'noir';</script>
+</head>
+
+<body><a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header"><a class="brand" href="index.html"><span class="brand-mark">LA<br>LLL</span><span>LA LA
+                L.A.</span></a>
+        <nav class="main-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="map.html">Map</a><a
+                href="itinerary.html">Itineraries</a><a href="about.html" aria-current="page">About</a><a
+                href="documentation.html">Documentation</a><a href="disclaimer.html">Disclaimer</a></nav>
+        <div class="header-tools"><button class="tool-button" data-theme-toggle aria-expanded="false">Change
+                theme</button></div>
+    </header>
+    <aside class="theme-drawer" aria-label="Theme selector">
+        <p class="eyebrow">Two deliberate visual systems</p>
+        <div class="theme-grid">
+            <button class="theme-choice" data-set-theme="noir"><strong>Noir Case File</strong><span>1940s police
+                    dossier</span></button>
+            <button class="theme-choice" data-set-theme="technicolor"><strong>Technicolor Musical</strong><span>La La Land sunset palette</span></button>
+        </div>
+        <p class="small">The selected theme is saved across pages.</p>
+    </aside>
+    <main id="main">
+        <div class="page">
+            <p class="eyebrow">About the project</p>
+            <h1 class="page-title">La La Land's Los Angeles, as a distributed museum.</h1>
+            <div class="section-head">
+                <p class="lede">La La L.A. was designed as a companion for planning at home and navigating in the
+                    city. It treats each of a single film's real filming locations as a museum item with an exact
+                    geographic position, a camera orientation, structured metadata and audience-sensitive
+                    interpretation.</p>
+                <div class="notice"><strong>Team fields are intentionally editable.</strong><br>Open
+                    <code>data/locations.js</code> and this page to replace the placeholder team name, member
+                    names, emails and repository URL.
+                </div>
+            </div>
+            <section class="section">
+                <div class="doc-grid">
+                    <article class="doc-card">
+                        <h3>Team</h3>
+                        <p><strong>[Add your team name]</strong></p>
+                        <p>[Your name] · [email]</p>
+                    </article>
+                    <article class="doc-card">
+                        <h3>Course context</h3>
+                        <p>Information Modeling and Web Technologies<br>Master's Degree in Digital Humanities and
+                            Digital Knowledge<br>University of Bologna · A.Y. 2024-25</p>
+                    </article>
+                    <article class="doc-card">
+                        <h3>What is complete</h3>
+                        <p>15 locations from La La Land (2016), three narratives, two switchable graphic themes, nine
+                            reading combinations per item, a self-contained geographic map, QR codes, and CSV/JSON
+                            data.</p>
+                    </article>
+                    <article class="doc-card">
+                        <h3>What to personalise</h3>
+                        <p>Team identity, GitHub Pages URL, your own field photographs in each location's photo
+                            gallery, any professor-requested bibliography format, and final checking of access
+                            conditions before an actual visit.</p>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="site-footer"><span>2026 © La La L.A. · University course prototype</span>
+        <div class="page-step"><a class="button" href="itinerary.html">← Itineraries</a><a class="button"
+                href="documentation.html">Documentation →</a></div>
+    </footer>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
