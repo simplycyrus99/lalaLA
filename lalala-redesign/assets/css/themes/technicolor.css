@@ -1,0 +1,127 @@
+/* ==========================================================================
+   Theme: Technicolor Musical
+   La La Land's own palette — twilight purple into sunset orange, gold
+   starlight, teal for one cool counter-note. Everything rounds, centers,
+   and glows; nothing is a hard edge.
+   ========================================================================== */
+[data-theme="technicolor"] {
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Poppins', system-ui, sans-serif;
+  --font-accent: 'Caveat', cursive;
+  --font-mono: 'Poppins', system-ui, sans-serif;
+
+  --ink: #2b1140;
+  --paper: #fdf3e7;
+  --surface: #fffaf2;
+  --surface-2: #ffe6c9;
+  --line: rgba(123,63,160,.22);
+  --accent: #ff6f3c;
+  --accent-2: #7b3fa0;
+  --accent-3: #2ec4b6;
+
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 30px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 4px 14px rgba(123,63,160,.16);
+  --shadow-md: 0 12px 30px rgba(123,63,160,.22);
+  --shadow-lg: 0 24px 60px rgba(43,17,64,.28);
+
+  --border-w: 0px;
+  --tracking-eyebrow: .08em;
+  --content-align: center;
+}
+
+[data-theme="technicolor"] body {
+  background:
+    radial-gradient(1200px 500px at 50% -10%, rgba(255,201,60,.28), transparent 60%),
+    var(--paper);
+}
+
+[data-theme="technicolor"] .site-header {
+  border-bottom: none; border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  background: var(--surface); box-shadow: var(--shadow-sm);
+}
+[data-theme="technicolor"] .brand-mark {
+  background: linear-gradient(135deg, var(--accent-2), var(--accent));
+  color: #fff8ef; box-shadow: 0 0 0 4px rgba(255,201,60,.25);
+}
+[data-theme="technicolor"] .main-nav a { border-radius: var(--radius-pill); }
+[data-theme="technicolor"] .main-nav a:hover,
+[data-theme="technicolor"] .main-nav a[aria-current="page"] {
+  background: linear-gradient(135deg, var(--accent-2), var(--accent)); color: #fff8ef;
+}
+
+[data-theme="technicolor"] .eyebrow {
+  font-family: var(--font-accent); font-size: 1.15rem; font-weight: 700;
+  text-transform: none; letter-spacing: .01em; color: var(--accent-2);
+}
+[data-theme="technicolor"] .page { text-align: center; }
+[data-theme="technicolor"] .page-title { text-align: center; }
+[data-theme="technicolor"] .lede { margin-inline: auto; }
+[data-theme="technicolor"] .section-head { justify-content: center; text-align: center; }
+[data-theme="technicolor"] .section-head .lede { margin-inline: auto; }
+
+[data-theme="technicolor"] .hero {
+  text-align: center; grid-template-columns: 1fr; justify-items: center;
+  background: linear-gradient(160deg, rgba(123,63,160,.16), rgba(255,111,60,.14));
+  border-radius: var(--radius-lg); padding: 4rem 2rem;
+}
+[data-theme="technicolor"] .hero-copy { display: flex; flex-direction: column; align-items: center; }
+[data-theme="technicolor"] .hero h1 {
+  background: linear-gradient(135deg, var(--accent-2), var(--accent));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+[data-theme="technicolor"] .hero-actions, [data-theme="technicolor"] .stats { justify-content: center; }
+[data-theme="technicolor"] .hero-visual { order: -1; }
+[data-theme="technicolor"] .hero-visual img { border-radius: var(--radius-lg); }
+[data-theme="technicolor"] .hero-ticket { border-radius: var(--radius-md); margin-inline: auto; }
+
+[data-theme="technicolor"] .cards, [data-theme="technicolor"] .doc-grid { justify-items: stretch; }
+[data-theme="technicolor"] .card, [data-theme="technicolor"] .doc-card,
+[data-theme="technicolor"] .notice, [data-theme="technicolor"] .controls,
+[data-theme="technicolor"] .itinerary-stop, [data-theme="technicolor"] .roadbook-item,
+[data-theme="technicolor"] .qr-block, [data-theme="technicolor"] .shot-guide-card,
+[data-theme="technicolor"] .google-map-card, [data-theme="technicolor"] .theme-drawer,
+[data-theme="technicolor"] .theme-choice {
+  border: none; box-shadow: var(--shadow-sm);
+}
+[data-theme="technicolor"] .card:hover { box-shadow: var(--shadow-md); }
+[data-theme="technicolor"] .card-body { text-align: left; }
+[data-theme="technicolor"] .doc-card { text-align: left; }
+
+[data-theme="technicolor"] .tag {
+  background: linear-gradient(135deg, var(--accent-3), var(--accent-2)); color: #fff8ef; border: none;
+}
+[data-theme="technicolor"] .button, [data-theme="technicolor"] .tool-button {
+  border-radius: var(--radius-pill); border: none;
+  background: linear-gradient(135deg, var(--accent-2), var(--accent)); color: #fff8ef;
+}
+[data-theme="technicolor"] .tool-button { background: var(--surface-2); color: var(--ink); }
+[data-theme="technicolor"] .button:hover, [data-theme="technicolor"] .tool-button:hover {
+  box-shadow: 0 0 0 6px rgba(255,201,60,.2);
+}
+
+[data-theme="technicolor"] .stat strong {
+  background: linear-gradient(135deg, var(--accent-2), var(--accent));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+
+[data-theme="technicolor"] .chapter-label {
+  font-family: var(--font-accent); font-size: 1.4rem; text-align: center; opacity: 1; color: var(--accent-2);
+}
+[data-theme="technicolor"] .itinerary-stop, [data-theme="technicolor"] .roadbook-item { border-radius: var(--radius-lg); }
+[data-theme="technicolor"] .itinerary-stop img { border-radius: var(--radius-md); }
+
+[data-theme="technicolor"] table.metadata th { color: var(--accent-2); font-family: var(--font-display); font-weight: 600; }
+[data-theme="technicolor"] table.metadata th, [data-theme="technicolor"] table.metadata td { border-bottom-color: var(--line); }
+
+[data-theme="technicolor"] .lightbox { background: rgba(43,17,64,.9); }
+
+[data-theme="technicolor"] .theme-specimen.technicolor { box-shadow: var(--shadow-lg); }
+
+/* A few scattered stars, purely decorative, purely on-brand */
+[data-theme="technicolor"] .page-title::after {
+  content: " ✦"; color: var(--accent-3); -webkit-text-fill-color: var(--accent-3);
+}
