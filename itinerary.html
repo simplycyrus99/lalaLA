@@ -31,7 +31,7 @@
     <main id="main">
         <div class="page">
             <p class="eyebrow">Narrative planning</p>
-            <h1 class="page-title">Walk through one film, three ways.</h1>
+            <h1 class="page-title">Walk through one film, two ways.</h1>
             <p class="lede" id="narrativeDescription"></p>
             <div class="route-controls" id="narrativeControls"></div>
             <div class="notice" id="routeNotice"></div>
@@ -50,6 +50,7 @@
         (function () {
             const D = window.LMML_DATA, L = D.locations;
             let key = new URLSearchParams(location.search).get('narrative') || 'route';
+            if (!D.narratives[key]) key = 'route';
             const controls = document.getElementById('narrativeControls'),
                   list = document.getElementById('itineraryList'),
                   desc = document.getElementById('narrativeDescription'),
