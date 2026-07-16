@@ -1,0 +1,1 @@
+"use strict";document.addEventListener("DOMContentLoaded",function(e){document.querySelectorAll('a[href^="#"]:not([href$="#"])').forEach(function(t){t.addEventListener("click",function(e){e.preventDefault(),document.querySelector(this.getAttribute("href")).scrollIntoView({behavior:"smooth"}),window.history.pushState({},"",t.hash)})})});

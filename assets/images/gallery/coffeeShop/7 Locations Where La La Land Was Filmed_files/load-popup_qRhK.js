@@ -1,0 +1,1 @@
+"use strict";$(document).ready(function(){"shown"!=localStorage.getItem("isshow")&&setTimeout(function(){$("body").addClass("show-overlay"),localStorage.setItem("isshow","shown")},4e3)});

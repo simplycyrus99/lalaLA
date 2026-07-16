@@ -43,7 +43,7 @@ window.LMML_DATA = {
       "sources": ["https://www.seeing-stars.com/Locations/LaLaLand/QuickIndex.shtml"],
       "qr": "assets/qr/traffic-interchange.png",
       "image": "assets/images/locations/traffic-interchange.svg",
-      "movieStills": [],
+      "movieStills": "assets/images/gallery/reeway/r1.svg",
       "realPhotos": []
     },
     {
@@ -402,7 +402,7 @@ window.LMML_DATA = {
       "trivia": "The road this scene appears to be on doesn't match Dorilee Lane (the party's supposed street); it is a different stretch of Mount Hollywood Drive entirely.",
       "sources": ["https://www.seeing-stars.com/Locations/LaLaLand/QuickIndex.shtml"],
       "qr": "assets/qr/cathys-corner.png",
-      "image": "assets/images/locations/cathys-corner.svg",
+      "image": "assets/images/locations/hiltop.svg",
       "movieStills": [],
       "realPhotos": []
     },

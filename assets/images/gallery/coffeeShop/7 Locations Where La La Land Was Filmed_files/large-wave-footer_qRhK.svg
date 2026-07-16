@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="98px" viewBox="0 0 1440 98" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>large-wave-c</title>
+    <defs>
+        <path d="M0,0 C234.088542,96.3868052 481.130208,116.914751 741.125,61.5838381 C1001.11979,6.25292494 1234.07813,6.35446246 1440,61.8884507 L1440,389 L0,389 L0,0 Z" id="path-1"></path>
+    </defs>
+    <g id="large-wave-c" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Mask" fill="#D7FFEF" transform="translate(720.000000, 194.500000) scale(-1, 1) translate(-720.000000, -194.500000) " xlink:href="#path-1"></use>
+    </g>
+</svg>

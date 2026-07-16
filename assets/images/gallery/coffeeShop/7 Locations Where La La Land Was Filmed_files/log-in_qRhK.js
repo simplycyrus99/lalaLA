@@ -1,0 +1,1 @@
+"use strict";$(function(){$(document).on("submit","#send_email_form",function(e){e.preventDefault(),window.localStorage.setItem("emailForSignIn",e.target.email.value)}),$(document).on("submit","#resend_email_form",function(e){e.preventDefault(),window.localStorage.setItem("emailForSignIn",e.target.email.value),alert("We Resent An Email to Your Email")})});
