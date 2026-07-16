@@ -46,8 +46,8 @@
                     <div class="stat"><strong>1 day</strong><span>fast road itinerary</span></div>
                 </div>
             </div>
-            <div class="hero-visual"><img src="assets\images\locations\cathyCorner2.svg"
-                    alt="Stylised Griffith Observatory shot guide">
+            <div class="hero-visual">
+                <!-- The <img> tag has been removed – the image is now a CSS background -->
                 <div class="hero-ticket"><strong>One film, scattered across a real city.</strong><br><span>Follow the
                         road, or the film's own screen order. At every stop, match the camera
                         angle, read a tailored account, and open structured metadata.</span></div>
@@ -103,71 +103,13 @@
                     <p>The location viewer contains nine reading combinations for each stop: three lengths × three
                         audience/competence modes.</p>
                 </div>
-                <div class="cards">
-                    <article class="card">
-                        <div class="card-media"><img src="assets/images/locations/grand-central-market.svg"
-                                alt="Original shot-guide illustration for Grand Central Market"></div>
-                        <div class="card-body">
-                            <div class="tag-row"><span class="tag">Stop 01</span><span class="tag">2016</span></div>
-                            <h3>Grand Central Market</h3>
-                            <p>Summer Montage, part 3</p><a class="button"
-                                href="location.html?id=grand-central-market">Open
-                                location</a>
-                        </div>
-                    </article>
-                    <article class="card">
-                        <div class="card-media"><img src="assets/images/locations/elysian-park-palms.svg"
-                                alt="Original shot-guide illustration for Elysian Park Palms"></div>
-                        <div class="card-body">
-                            <div class="tag-row"><span class="tag">Stop 02</span><span class="tag">2016</span></div>
-                            <h3>The Palm Trees</h3>
-                            <p>Summer Montage, part 5</p><a class="button"
-                                href="location.html?id=elysian-park-palms">Open location</a>
-                        </div>
-                    </article>
-                    <article class="card">
-                        <div class="card-media"><img src="assets/images/locations/colorado-street-bridge.svg"
-                                alt="Original shot-guide illustration for the Colorado Street Bridge"></div>
-                        <div class="card-body">
-                            <div class="tag-row"><span class="tag">Stop 03</span><span class="tag">2016</span></div>
-                            <h3>The Bridge at Sunset</h3>
-                            <p>Summer Montage, part 2</p><a class="button"
-                                href="location.html?id=colorado-street-bridge">Open location</a>
-                        </div>
-                    </article>
-                    <article class="card">
-                        <div class="card-media"><img src="assets/images/locations/rialto-theatre.svg"
-                                alt="Original shot-guide illustration for the Rialto Theatre"></div>
-                        <div class="card-body">
-                            <div class="tag-row"><span class="tag">Stop 04</span><span class="tag">2016</span></div>
-                            <h3>The Rialto Theatre</h3>
-                            <p>Their first real date</p><a class="button" href="location.html?id=rialto-theatre">Open
-                                location</a>
-                        </div>
-                    </article>
-                    <article class="card">
-                        <div class="card-media"><img src="assets/images/locations/griffith-observatory.svg"
-                                alt="Original shot-guide illustration for Griffith Observatory"></div>
-                        <div class="card-body">
-                            <div class="tag-row"><span class="tag">Stop 05</span><span class="tag">2016</span></div>
-                            <h3>The Observatory</h3>
-                            <p>The Planetarium waltz</p><a class="button"
-                                href="location.html?id=griffith-observatory">Open
-                                location</a>
-                        </div>
-                    </article>
-                    <article class="card">
-                        <div class="card-media"><img src="assets\images\locations\hiltop.svg"
-                                alt="Original shot-guide illustration for Cathy's Corner"></div>
-                        <div class="card-body">
-                            <div class="tag-row"><span class="tag">Stop 06</span><span class="tag">2016</span></div>
-                            <h3>The Hilltop View</h3>
-                            <p>A Lovely Night</p><a class="button" href="location.html?id=cathys-corner">Open
-                                location</a>
-                        </div>
-                    </article>
+                <!-- Container for dynamic cards -->
+                <div class="cards" id="locationCards"></div>
+                <!-- Control buttons -->
+                <div style="margin-top:1.5rem; display:flex; gap:0.8rem; flex-wrap:wrap;">
+                    <button class="button" id="showAllBtn" data-expanded="false">Show all 15 locations</button>
+                    <a class="button" href="map.html">See all on map →</a>
                 </div>
-                <p style="margin-top:2rem"><a class="button" href="map.html">See all 15 locations</a></p>
             </section>
             <section class="section">
                 <div class="notice"><strong>Image policy:</strong> the included images are original, self-contained
@@ -181,6 +123,60 @@
         <div class="page-step"><a class="button" href="map.html">Map →</a></div>
     </footer>
     <script src="assets/js/app.js"></script>
+    <script src="data/locations.js"></script>
+    <script>
+        (function () {
+            const data = window.LMML_DATA;
+            if (!data || !data.locations) return;
+
+            const container = document.getElementById('locationCards');
+            const showAllBtn = document.getElementById('showAllBtn');
+            const locations = data.locations;
+            // Sort by routeOrder if you want a consistent default order
+            // (already sorted in the data, but just in case)
+            const sorted = [...locations].sort((a, b) => a.routeOrder - b.routeOrder);
+            const INITIAL_COUNT = 6;
+            let expanded = false;
+
+            function renderCards(showAll) {
+                const count = showAll ? sorted.length : INITIAL_COUNT;
+                const items = sorted.slice(0, count);
+                container.innerHTML = items.map((loc, index) => {
+                    // Build tag row: we can show stop number, year, song
+                    const tags = `<span class="tag">Stop ${String(loc.routeOrder).padStart(2, '0')}</span>
+                                 <span class="tag">${loc.year}</span>`;
+                    return `
+                        <article class="card" data-reveal>
+                            <div class="card-media"><img src="${loc.image}" alt="Original shot-guide illustration for ${loc.title}"></div>
+                            <div class="card-body">
+                                <div class="tag-row">${tags}</div>
+                                <h3>${loc.title}</h3>
+                                <p>${loc.song || loc.short}</p>
+                                <a class="button" href="location.html?id=${loc.id}">Open location</a>
+                            </div>
+                        </article>
+                    `;
+                }).join('');
+
+                // Re-run scroll reveal for the new cards
+                if (window.LMML && window.LMML.reveal) {
+                    window.LMML.reveal(container);
+                }
+            }
+
+            // Initial render (show only first 6)
+            renderCards(false);
+            showAllBtn.textContent = 'Show all 15 locations';
+            showAllBtn.dataset.expanded = 'false';
+
+            showAllBtn.addEventListener('click', function () {
+                expanded = !expanded;
+                renderCards(expanded);
+                this.textContent = expanded ? 'Show fewer locations' : 'Show all 15 locations';
+                this.dataset.expanded = String(expanded);
+            });
+        })();
+    </script>
 </body>
 
 </html>

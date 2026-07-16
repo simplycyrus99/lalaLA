@@ -1,1 +1,0 @@
-"use strict";jQuery(function(e){e("._slick_slider").on("init",function(){e(this).parent().show()}).slick({infinite:!1,mobileFirst:!0,slidesToShow:1,slidesToScroll:1,arrows:!0,centerMode:!0,centerPadding:"26px",focusOnSelect:!1,responsive:[{breakpoint:767,settings:{centerPadding:"46px",centerMode:!1,variableWidth:!1}},{breakpoint:1023,settings:{centerPadding:"false"}}]})});

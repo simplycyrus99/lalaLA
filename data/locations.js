@@ -43,8 +43,12 @@ window.LMML_DATA = {
       "sources": ["https://www.seeing-stars.com/Locations/LaLaLand/QuickIndex.shtml"],
       "qr": "assets/qr/traffic-interchange.png",
       "image": "assets/images/locations/traffic-interchange.svg",
-      "movieStills": "assets/images/gallery/reeway/r1.svg",
-      "realPhotos": []
+      "movieStills": [
+  { "src": "assets/images/gallery/freeway/m1.svg", "caption": "" }
+],
+"realPhotos": [
+  { "src": "assets/images/gallery/freeway/r1.svg", "caption": "" }
+]
     },
     {
       "id": "courtyard-apartments",
@@ -79,9 +83,19 @@ window.LMML_DATA = {
       "sources": ["https://www.seeing-stars.com/Locations/LaLaLand/QuickIndex.shtml"],
       "qr": "assets/qr/courtyard-apartments.png",
       "image": "assets/images/locations/courtyard-apartments.svg",
-      "movieStills": [],
-      "realPhotos": []
-    },
+          "movieStills": [
+    { "src": "assets/images/gallery/courtyard-apartments/m1.svg", "caption": "" },
+    { "src": "assets/images/gallery/courtyard-apartments/m2.svg", "caption": "" },
+    { "src": "assets/images/gallery/courtyard-apartments/m3.svg", "caption": "" }
+  ],
+  "realPhotos": [
+    { "src": "assets/images/gallery/courtyard-apartments/r1.svg", "caption": "" },
+    { "src": "assets/images/gallery/courtyard-apartments/r2.svg", "caption": "" },
+    { "src": "assets/images/gallery/courtyard-apartments/r3.svg", "caption": "" },
+    { "src": "assets/images/gallery/courtyard-apartments/r4.png", "caption": "" },
+    { "src": "assets/images/gallery/courtyard-apartments/r5.png", "caption": "" }
+  ]
+},
     {
       "id": "hollywood-murals",
       "title": "The Long Walk Home",
@@ -115,9 +129,13 @@ window.LMML_DATA = {
       "sources": ["https://www.seeing-stars.com/Locations/LaLaLand/QuickIndex.shtml"],
       "qr": "assets/qr/hollywood-murals.png",
       "image": "assets/images/locations/hollywood-murals.svg",
-      "movieStills": [],
-      "realPhotos": []
-    },
+        "movieStills": [
+    { "src": "assets/images/gallery/murals/m1.svg", "caption": "" }
+  ],
+  "realPhotos": [
+    { "src": "assets/images/gallery/murals/r1.svg", "caption": "" }
+  ]
+},
     {
       "id": "smoke-house",
       "title": "Lipton's (The Smoke House)",
@@ -151,45 +169,54 @@ window.LMML_DATA = {
       "sources": ["https://www.seeing-stars.com/Locations/LaLaLand/QuickIndex.shtml"],
       "qr": "assets/qr/smoke-house.png",
       "image": "assets/images/locations/smoke-house.svg",
-      "movieStills": [],
-      "realPhotos": []
-    },
-    {
-      "id": "warner-bros-backlot",
-      "title": "Walking Between the Sound Stages",
-      "short": "The studio tour, and the 'I hate jazz' scene",
-      "address": "4000 Warner Blvd, Burbank, CA 91522",
-      "lat": 34.1476764,
-      "lng": -118.3386123,
-      "anchorWork": "La La Land",
-      "year": 2016,
-      "director": "Damien Chazelle",
-      "mediaType": "Film",
-      "genres": ["Musical", "Romance", "Drama"],
-      "primaryGenre": "Musical & Romance",
-      "routeChapter": "Burbank studio district",
-      "song": "Study & Jazz",
-      "screenOrder": 6,
-      "screenTime": "0:42:06",
-      "routeOrder": 11,
-      "shotFacing": "Southeast, along Avenue D",
-      "viewpoint": "Between Stage 16 (right) and Stage 21 (left), heading toward The Mill.",
-      "shotInstruction": "Warner Bros. is a working studio, not a walk-up location — the backlot is only accessible on an official studio tour, so plan and book ahead rather than expecting street access.",
-      "bestTime": "Per studio tour schedule",
-      "visitMinutes": 20,
-      "accessibility": "Access only via a paid, scheduled Warner Bros. Studio Tour; no public walk-up access to the backlot.",
-      "films": [],
-      "summary": "During a tour of the studio where Mia works, Sebastian tells her to write her own roles instead of waiting to be cast in someone else's — advice that later saves her career — and she confesses she doesn't actually like jazz.",
-      "context": "The walk was filmed on the real Warner Bros. backlot, on Avenue D between Stage 16 and Stage 21, heading toward a facility called The Mill. Stage 16 was raised to 98 feet at the request of actress Marion Davies, making it briefly the tallest sound stage in North America; both stages have hosted decades of film and TV productions.",
-      "significance": "It grounds the film's fictional studio inside a real, working one, and the advice given here is a hinge point for Mia's arc in the story.",
-      "scene": "The two soundstages flanking the walk (16 and 21) are visibly enormous, aging industrial buildings rather than a glamorous backdrop — the ordinary machinery behind the on-screen magic.",
-      "trivia": "Stage 16 has hosted everything from Busby Berkeley musical numbers to a built-in-studio set of an entire park for 'The Music Man'; Stage 21 currently houses a network sitcom.",
-      "sources": ["https://www.seeing-stars.com/Locations/LaLaLand/QuickIndex.shtml"],
-      "qr": "assets/qr/warner-bros-backlot.png",
-      "image": "assets/images/locations/warner-bros-backlot.svg",
-      "movieStills": [],
-      "realPhotos": []
-    },
+        "movieStills": [
+    { "src": "assets/images/gallery/resturant smoke/m1.svg", "caption": "" }
+  ],
+  "realPhotos": [
+    { "src": "assets/images/gallery/resturant smoke/r1.svg", "caption": "These are the best 1-to-1 comparison pictures available on the internet – I really appreciate the fan's dedication!" }
+  ]
+},
+      {
+  "id": "warner-bros-backlot",
+  "title": "Walking Between the Sound Stages",
+  "short": "The studio tour, and the 'I hate jazz' scene",
+  "address": "4000 Warner Blvd, Burbank, CA 91522",
+  "lat": 34.1476764,
+  "lng": -118.3386123,
+  "anchorWork": "La La Land",
+  "year": 2016,
+  "director": "Damien Chazelle",
+  "mediaType": "Film",
+  "genres": ["Musical", "Romance", "Drama"],
+  "primaryGenre": "Musical & Romance",
+  "routeChapter": "Burbank studio district",
+  "song": "Study & Jazz",
+  "screenOrder": 6,
+  "screenTime": "0:42:06",
+  "routeOrder": 11,
+  "shotFacing": "Southeast, along Avenue D",
+  "viewpoint": "Between Stage 16 (right) and Stage 21 (left), heading toward The Mill.",
+  "shotInstruction": "Warner Bros. is a working studio, not a walk-up location — the backlot is only accessible on an official studio tour, so plan and book ahead rather than expecting street access.",
+  "bestTime": "Per studio tour schedule",
+  "visitMinutes": 20,
+  "accessibility": "Access only via a paid, scheduled Warner Bros. Studio Tour; no public walk-up access to the backlot.",
+  "films": [],
+  "summary": "During a tour of the studio where Mia works, Sebastian tells her to write her own roles instead of waiting to be cast in someone else's — advice that later saves her career — and she confesses she doesn't actually like jazz.",
+  "context": "The walk was filmed on the real Warner Bros. backlot, on Avenue D between Stage 16 and Stage 21, heading toward a facility called The Mill. Stage 16 was raised to 98 feet at the request of actress Marion Davies, making it briefly the tallest sound stage in North America; both stages have hosted decades of film and TV productions. We are especially grateful to the dedicated fan photographer who provided the excellent comparison images for this gallery.",
+  "significance": "It grounds the film's fictional studio inside a real, working one, and the advice given here is a hinge point for Mia's arc in the story.",
+  "scene": "The two soundstages flanking the walk (16 and 21) are visibly enormous, aging industrial buildings rather than a glamorous backdrop — the ordinary machinery behind the on-screen magic.",
+  "trivia": "Stage 16 has hosted everything from Busby Berkeley musical numbers to a built-in-studio set of an entire park for 'The Music Man'; Stage 21 currently houses a network sitcom.",
+  "sources": ["https://www.seeing-stars.com/Locations/LaLaLand/QuickIndex.shtml"],
+  "qr": "assets/qr/warner-bros-backlot.png",
+  "image": "assets/images/locations/warner-bros-backlot.svg",
+  "movieStills": [
+    { "src": "assets/images/gallery/stage/m1.svg", "caption": "" },
+    { "src": "assets/images/gallery/stage/m2.svg", "caption": "" }
+  ],
+  "realPhotos": [
+    { "src": "assets/images/gallery/stage/r1.svg", "caption": "" }
+  ]
+},
     {
       "id": "lighthouse-cafe",
       "title": "The Lighthouse Jazz Club",
@@ -223,8 +250,12 @@ window.LMML_DATA = {
       "sources": ["https://www.seeing-stars.com/Locations/LaLaLand/QuickIndex.shtml"],
       "qr": "assets/qr/lighthouse-cafe.png",
       "image": "assets/images/locations/lighthouse-cafe.svg",
-      "movieStills": [],
-      "realPhotos": []
+        "movieStills": [
+    { "src": "assets/images/gallery/lighthouseCafe/m1.svg", "caption": "" }
+  ],
+  "realPhotos": [
+    { "src": "assets/images/gallery/lighthouseCafe/r1.svg", "caption": "" }
+  ]
     },
     {
       "id": "hermosa-pier",
@@ -259,8 +290,12 @@ window.LMML_DATA = {
       "sources": ["https://www.seeing-stars.com/Locations/LaLaLand/QuickIndex.shtml"],
       "qr": "assets/qr/hermosa-pier.png",
       "image": "assets/images/locations/hermosa-pier.svg",
-      "movieStills": [],
-      "realPhotos": []
+        "movieStills": [
+    { "src": "assets/images/gallery/pier/m1.svg", "caption": "" }
+  ],
+  "realPhotos": [
+    { "src": "assets/images/gallery/pier/r1.svg", "caption": "" }
+  ]
     },
     {
       "id": "angels-flight",
@@ -295,8 +330,15 @@ window.LMML_DATA = {
       "sources": ["https://www.seeing-stars.com/Locations/LaLaLand/QuickIndex.shtml"],
       "qr": "assets/qr/angels-flight.png",
       "image": "assets/images/locations/angels-flight.svg",
-      "movieStills": [],
-      "realPhotos": []
+      "movieStills": [
+    { "src": "assets/images/gallery/angel/m1.svg", "caption": "" },
+    { "src": "assets/images/gallery/angel/m2.svg", "caption": "" }
+  ],
+  "realPhotos": [
+    { "src": "assets/images/gallery/angel/r1.svg", "caption": "" },
+    { "src": "assets/images/gallery/angel/r2.svg", "caption": "" },
+    { "src": "assets/images/gallery/angel/r3.svg", "caption": "" }
+  ]
     },
     {
       "id": "rialto-theatre",
@@ -331,8 +373,12 @@ window.LMML_DATA = {
       "sources": ["https://www.seeing-stars.com/Locations/LaLaLand/QuickIndex.shtml"],
       "qr": "assets/qr/rialto-theatre.png",
       "image": "assets/images/locations/rialto-theatre.svg",
-      "movieStills": [],
-      "realPhotos": []
+        "movieStills": [
+    { "src": "assets/images/gallery/theater/m1.svg", "caption": "" }
+  ],
+  "realPhotos": [
+    { "src": "assets/images/gallery/theater/r1.svg", "caption": "" }
+  ]
     },
     {
       "id": "griffith-observatory",
@@ -367,8 +413,14 @@ window.LMML_DATA = {
       "sources": ["https://www.seeing-stars.com/Locations/LaLaLand/QuickIndex.shtml"],
       "qr": "assets/qr/griffith-observatory.png",
       "image": "assets/images/locations/griffith-observatory.svg",
-      "movieStills": [],
-      "realPhotos": []
+        "movieStills": [
+    { "src": "assets/images/gallery/observitory/m1.svg", "caption": "" },
+    { "src": "assets/images/gallery/observitory/m2.jpg", "caption": "" }
+  ],
+  "realPhotos": [
+    { "src": "assets/images/gallery/observitory/r1.jpg", "caption": "" },
+    { "src": "assets/images/gallery/observitory/r1.svg", "caption": "" }
+  ]
     },
     {
       "id": "cathys-corner",
@@ -403,8 +455,17 @@ window.LMML_DATA = {
       "sources": ["https://www.seeing-stars.com/Locations/LaLaLand/QuickIndex.shtml"],
       "qr": "assets/qr/cathys-corner.png",
       "image": "assets/images/locations/hiltop.svg",
-      "movieStills": [],
-      "realPhotos": []
+      "movieStills": [
+  { "src": "assets/images/gallery/hills/m1.svg", "caption": "" },
+  { "src": "assets/images/gallery/hills/m2.svg", "caption": "" },
+  { "src": "assets/images/gallery/hills/m3.svg", "caption": "" }
+],
+"realPhotos": [
+  { "src": "assets/images/gallery/hills/r1.svg", "caption": "" },
+  { "src": "assets/images/gallery/hills/r2.svg", "caption": "" },
+  { "src": "assets/images/gallery/hills/r3.svg", "caption": "" },
+  { "src": "assets/images/gallery/hills/r4.svg", "caption": "" }
+]
     },
     {
       "id": "jar-restaurant",
@@ -439,8 +500,13 @@ window.LMML_DATA = {
       "sources": ["https://www.seeing-stars.com/Locations/LaLaLand/QuickIndex.shtml"],
       "qr": "assets/qr/jar-restaurant.png",
       "image": "assets/images/locations/jar-restaurant.svg",
-      "movieStills": [],
-      "realPhotos": []
+        "movieStills": [
+    { "src": "assets/images/gallery/jar/m1.svg", "caption": "" }
+  ],
+  "realPhotos": [
+    { "src": "assets/images/gallery/jar/r1.svg", "caption": "" },
+    { "src": "assets/images/gallery/jar/jar_hollyliss_2520_25281_2520of_252022_2529_sQ53uj8.avif", "caption": "" }
+  ]
     },
     {
       "id": "colorado-street-bridge",
@@ -475,8 +541,12 @@ window.LMML_DATA = {
       "sources": ["https://www.seeing-stars.com/Locations/LaLaLand/QuickIndex.shtml"],
       "qr": "assets/qr/colorado-street-bridge.png",
       "image": "assets/images/locations/colorado-street-bridge.svg",
-      "movieStills": [],
-      "realPhotos": []
+        "movieStills": [
+    { "src": "assets/images/gallery/bridge/m1.svg", "caption": "" }
+  ],
+  "realPhotos": [
+    { "src": "assets/images/gallery/bridge/r1.svg", "caption": "" }
+  ]
     },
     {
       "id": "grand-central-market",
@@ -511,8 +581,13 @@ window.LMML_DATA = {
       "sources": ["https://www.seeing-stars.com/Locations/LaLaLand/QuickIndex.shtml"],
       "qr": "assets/qr/grand-central-market.png",
       "image": "assets/images/locations/grand-central-market.svg",
-      "movieStills": [],
-      "realPhotos": []
+        "movieStills": [
+    { "src": "assets/images/gallery/market/m1.svg", "caption": "" }
+  ],
+  "realPhotos": [
+    { "src": "assets/images/gallery/market/r1.svg", "caption": "" },
+    { "src": "assets/images/gallery/market/r2.svg", "caption": "" }
+  ]
     },
     {
       "id": "elysian-park-palms",
@@ -547,8 +622,13 @@ window.LMML_DATA = {
       "sources": ["https://www.seeing-stars.com/Locations/LaLaLand/QuickIndex.shtml"],
       "qr": "assets/qr/elysian-park-palms.png",
       "image": "assets/images/locations/elysian-park-palms.svg",
-      "movieStills": [],
-      "realPhotos": []
+        "movieStills": [
+    { "src": "assets/images/gallery/palm/m1.svg", "caption": "" }
+  ],
+  "realPhotos": [
+    { "src": "assets/images/gallery/palm/r1.svg", "caption": "" },
+    { "src": "assets/images/gallery/palm/Screenshot 2026-07-14 213256.svg", "caption": "" }
+  ]
     }
   ],
   "narratives": {

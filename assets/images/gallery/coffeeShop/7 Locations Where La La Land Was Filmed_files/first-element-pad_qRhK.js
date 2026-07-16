@@ -1,1 +1,0 @@
-"use strict";document.addEventListener("DOMContentLoaded",function(){var e=document.querySelector(".component-wrap");e&&(e.style.paddingTop="0")});

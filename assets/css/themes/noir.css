@@ -104,3 +104,8 @@
 }
 
 [data-theme="noir"] .theme-specimen.noir { box-shadow: var(--shadow-md); }
+
+/* Hero background opacity for Noir theme – more subtle */
+[data-theme="noir"] .hero::before {
+  opacity: 0.15;
+}

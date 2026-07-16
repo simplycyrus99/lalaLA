@@ -125,3 +125,8 @@
 [data-theme="technicolor"] .page-title::after {
   content: " ✦"; color: var(--accent-3); -webkit-text-fill-color: var(--accent-3);
 }
+
+/* Hero background opacity for Technicolor theme – slightly bolder */
+[data-theme="technicolor"] .hero::before {
+  opacity: 0.25;
+}

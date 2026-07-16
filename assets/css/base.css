@@ -107,7 +107,6 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0 0 .5em; line-height: 1.
 }
 .main-nav a:hover { background: var(--surface-2); color: var(--ink); }
 .main-nav a[aria-current="page"] { color: var(--ink); background: var(--surface-2); font-weight: 700; }
-.header-tools .tool-button { }
 
 /* ==========================================================================
    Buttons
@@ -196,6 +195,41 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0 0 .5em; line-height: 1.
   border-radius: var(--radius-md); box-shadow: var(--shadow-md);
   padding: 1rem 1.2rem; margin-top: -2rem; position: relative; z-index: 2;
   font-size: .85rem; max-width: 90%;
+}
+
+/* ==========================================================================
+   Hero Background Image
+   ========================================================================== */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Pseudo-element for background image */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../images/gallery/063483135755095.61eda22c249c1.webp");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+/* Make sure all hero content sits on top */
+.hero-copy,
+.hero-visual,
+.hero-ticket,
+.hero-actions,
+.stats {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hide the image inside hero-visual if it exists (fallback) */
+.hero-visual img {
+  display: none;
 }
 
 /* ==========================================================================

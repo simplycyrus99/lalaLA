@@ -395,16 +395,34 @@
       "visitMinutes": 180,
       "accessibility": "Foot and bicycle access only; the road is closed to vehicles. Isolated area — go in a group, bring water, and turn back well before dark.",
       "films": [],
-      "summary": "After leaving a party, Mia and Sebastian find a hilltop view and half-mock, half-fall into a competitive dance number shot in a single unbroken take — the image that became the film's poster.",
-      "context": "The spot is known as Cathy's Corner, on a hairpin turn of Mount Hollywood Drive in Griffith Park — a section of road closed to cars and reachable only on foot, roughly a 2.5-mile uphill hike from parking near the Observatory. The bench and blue lamp post seen in the film are props, since removed; the view itself faces north into the San Fernando Valley, not the skyline or ocean the song's lyrics describe.",
+      "summary": "After leaving a party, Mia and Sebastian find a ltop view and half-mock, half-fall into a competitive dance number shot in a single unbroken take — the image that became the film's poster.",
+      "context": "The spot is known as Cathy's Corner, ohiln a hairpin turn of Mount Hollywood Drive in Griffith Park — a section of road closed to cars and reachable only on foot, roughly a 2.5-mile uphill hike from parking near the Observatory. The bench and blue lamp post seen in the film are props, since removed; the view itself faces north into the San Fernando Valley, not the skyline or ocean the song's lyrics describe.",
       "significance": "It's a good example of a single iconic 'view' shot being built from a genuinely difficult-to-reach real spot, dressed with props, and edited to imply a different, more scenic sightline than the one actually available.",
       "scene": "The dance was filmed as one continuous take, with no cuts, timed to catch the actual sunset light — the production reportedly got a usable take only on the third day of trying.",
       "trivia": "The road this scene appears to be on doesn't match Dorilee Lane (the party's supposed street); it is a different stretch of Mount Hollywood Drive entirely.",
       "sources": ["https://www.seeing-stars.com/Locations/LaLaLand/QuickIndex.shtml"],
       "qr": "assets/qr/cathys-corner.png",
       "image": "assets/images/locations/cathys-corner.svg",
-      "movieStills": [],
-      "realPhotos": []
+      "movieStills": [
+  { 
+    "src": "assets/images/gallery/hills/m1.svg", 
+    "caption": "Mia and Sebastian dancing in the planetarium" 
+  },
+  { 
+    "src": "assets/images/gallery/griffith-observatory-movie-02.jpg", 
+    "caption": "The exterior at night" 
+  }
+],
+"realPhotos": [
+  { 
+    "src": "assets/images/gallery/griffith-observatory-real-01.jpg", 
+    "caption": "My visit to the observatory, spring 2026" 
+  },
+  { 
+    "src": "assets/images/gallery/griffith-observatory-real-02.jpg", 
+    "caption": "View from the west terrace" 
+  }
+]
     },
     {
       "id": "jar-restaurant",
