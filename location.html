@@ -98,7 +98,7 @@
             </div>
           </section>
 
-                    <div class="qr-block">
+          <div class="qr-block">
             <img id="qr" alt="QR code for this location">
             <div><strong>Scan for even more information!</strong>
               <p class="small">This QR code will take you to an external source if you are more curious about the location.</p>
@@ -145,13 +145,21 @@
       let id = params.get('id') || L[0].id;
       let loc = L.find(x => x.id === id) || L[0];
       const $ = selector => document.querySelector(selector);
-      const aud = $('#audience'), len = $('#length'), nar = $('#narrative');
+      const aud = $('#audience'),
+        len = $('#length'),
+        nar = $('#narrative');
       nar.value = params.get('narrative') || 'route';
-      let lightboxImages = []; // will hold combined array of all gallery images
+      let lightboxImages = [];
       let lightboxIndex = 0;
 
       function esc(value) {
-        return String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
+        return String(value).replace(/[&<>"']/g, char => ({
+          '&': '&amp;',
+          '<': '&lt;',
+          '>': '&gt;',
+          '"': '&quot;',
+          "'": '&#39;'
+        } [char]));
       }
 
       function googleSearchUrl(item) {
@@ -194,24 +202,36 @@
         return paragraphs.map(text => `<p>${esc(text)}</p>`).join('');
       }
 
-      function row(key, value) { return `<tr><th>${esc(key)}</th><td>${value}</td></tr>`; }
+      function row(key, value) {
+        return `<tr><th>${esc(key)}</th><td>${value}</td></tr>`;
+      }
 
-      // Render two galleries: movieStills and realPhotos
+      // --- FIXED: renderGallery (no duplicate, main image first) ---
       function renderGallery() {
+        // Start with the main shot-guide image as the first lightbox item
+        const mainImg = document.getElementById('locationImage');
+        const mainSrc = mainImg ? mainImg.src : loc.image;
+        lightboxImages = [{
+          src: mainSrc,
+          caption: 'Camera-match guide for ' + loc.title
+        }];
+
         const movieStills = loc.movieStills || [];
         const realPhotos = loc.realPhotos || [];
         const container = $('#photoGallery');
         container.innerHTML = '';
 
-        // helper to create a grid section
         function renderSection(title, items, type) {
           if (!items.length) {
-            return `<div class="gallery-empty"><strong>No ${title.toLowerCase()} yet</strong><span>Add images to the <code>${type}</code> array for "${esc(loc.title)}" in <code>data/locations.json</code>.</span></div>`;
+            return `<div class="gallery-empty"><strong>No ${title.toLowerCase()} yet</strong><span>Add images to the <code>${type}</code> array in <code>data/locations.json</code>.</span></div>`;
           }
           let html = `<h3 class="gallery-section-title">${title}</h3><div class="gallery-grid">`;
           items.forEach((item, idx) => {
-            const globalIndex = lightboxImages.length;
-            lightboxImages.push({ src: item.src, caption: item.caption || `${title} – ${loc.title}` });
+            const globalIndex = lightboxImages.length; // This gives 1, 2, 3...
+            lightboxImages.push({
+              src: item.src,
+              caption: item.caption || `${title} – ${loc.title}`
+            });
             html += `<button class="gallery-item" type="button" data-index="${globalIndex}" aria-label="Open photo ${idx + 1} of ${items.length} (${title})">
                         <img src="${esc(item.src)}" alt="${esc(item.caption || loc.title)}" loading="lazy">
                         <figcaption>${esc(item.caption || '')}</figcaption>
@@ -221,13 +241,11 @@
           return html;
         }
 
-        // Build combined lightbox images array
-        lightboxImages = [];
         const movieHTML = renderSection('Movie Scenes', movieStills, 'movieStills');
         const realHTML = renderSection('Real Life Photos', realPhotos, 'realPhotos');
         container.innerHTML = movieHTML + realHTML;
 
-        // Attach click events to all gallery items
+        // Attach click events to thumbnails
         container.querySelectorAll('.gallery-item').forEach(btn => {
           btn.addEventListener('click', () => {
             const idx = Number(btn.dataset.index);
@@ -248,10 +266,14 @@
         $('#lightbox').hidden = false;
       }
 
-      $('#lightboxClose').onclick = () => { $('#lightbox').hidden = true; };
+      $('#lightboxClose').onclick = () => {
+        $('#lightbox').hidden = true;
+      };
       $('#lightboxPrev').onclick = () => openLightbox(lightboxIndex - 1);
       $('#lightboxNext').onclick = () => openLightbox(lightboxIndex + 1);
-      $('#lightbox').addEventListener('click', (e) => { if (e.target.id === 'lightbox') $('#lightbox').hidden = true; });
+      $('#lightbox').addEventListener('click', (e) => {
+        if (e.target.id === 'lightbox') $('#lightbox').hidden = true;
+      });
       document.addEventListener('keydown', (e) => {
         if ($('#lightbox').hidden) return;
         if (e.key === 'Escape') $('#lightbox').hidden = true;
@@ -261,8 +283,13 @@
 
       function render() {
         document.title = `${loc.title} · La La L.A.`;
-        $('#locationImage').src = loc.image;
-        $('#locationImage').alt = `Original camera-match guide for ${loc.title}`;
+
+        const img = $('#locationImage');
+        img.src = loc.image;
+        img.alt = `Original camera-match guide for ${loc.title}`;
+        img.style.cursor = 'pointer';
+        img.onclick = () => openLightbox(0);
+
         $('#shotFacing').textContent = loc.shotFacing;
         $('#viewpoint').textContent = loc.viewpoint;
 
@@ -278,7 +305,7 @@
         const googleUrl = googleSearchUrl(loc);
         $('#metadata').innerHTML =
           row('Address', esc(loc.address)) +
-          row('Coordinates', `${loc.lat.toFixed(5)}, ${loc.lng.toFixed(5)} · <a href="${googleUrl}" target="_blank" rel="noopener">Google Maps</a> <span class="small">(approximate — verify before submission)</span>`) +
+          row('Coordinates', `${loc.lat.toFixed(5)}, ${loc.lng.toFixed(5)} · <a href="${googleUrl}" target="_blank" rel="noopener">Google Maps</a> <span class="small">(approximate)</span>`) +
           row('Anchor work', `${esc(loc.anchorWork)} (${loc.year})`) +
           row('Director', esc(loc.director)) +
           row('Media type', esc(loc.mediaType)) +
@@ -309,8 +336,14 @@
         if (control === nar) history.replaceState(null, '', `?id=${loc.id}&narrative=${nar.value}`);
         render();
       }));
-      $('#less').onclick = () => { len.value = len.value === 'long' ? 'medium' : 'brief'; render(); };
-      $('#more').onclick = () => { len.value = len.value === 'brief' ? 'medium' : 'long'; render(); };
+      $('#less').onclick = () => {
+        len.value = len.value === 'long' ? 'medium' : 'brief';
+        render();
+      };
+      $('#more').onclick = () => {
+        len.value = len.value === 'brief' ? 'medium' : 'long';
+        render();
+      };
       render();
     })();
   </script>
