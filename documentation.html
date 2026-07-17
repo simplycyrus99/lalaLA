@@ -14,7 +14,7 @@
 </head>
 
 <body><a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header"><a class="brand" href="index.html"><span class="brand-mark">LA<br>LLL</span><span>LA LA
+    <header class="site-header"><a class="brand" href="index.html"><span class="brand-mark">LA<br>LLL</span><span>La La
                 L.A.</span></a>
         <nav class="main-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="map.html">Map</a><a
                 href="itinerary.html">Itineraries</a><a href="about.html">About</a><a href="documentation.html"
@@ -37,14 +37,18 @@
             <h1 class="page-title">Why every choice was made this way.</h1>
             <p class="lede">This page exists because deliberate design has to be explainable, not just felt. Every
                 section below answers a "why" question a reader might reasonably ask.</p>
-
+<div class="notice" style="margin-top:1rem"><strong>Context:</strong> Context: A project that was initially going to
+     be about he music culture of Los Angeles eventually became simply about LA itself due to the lack of time, good
+      visual sources, and sheer man power. The project used the agile workflow for management, and went through 
+      substantial changes from what it was supposed to be. While writing a clean code is of at-most importance, 
+      smooth operations, and minimum visual appeal were prioritized. </div>
             <section class="section">
                 <h2>1. Curatorial model</h2>
                 <div class="doc-grid">
                     <article class="doc-card">
                         <h3>Collection unit</h3>
-                        <p>Each item is a <strong>real filming location</strong> from a single anchor work, La La Land
-                            (2016). Unlike a multi-film collection, every record shares one director, one year and one
+                        <p>Each item is a <strong>real filming location</strong> in Los Angeles, California from a single anchor work, La La Land
+                            (2016). The movie pays homage to the city by explicitly choosing all filming locations from LA itself. Unlike a multi-film collection, every record shares one director, one year and one
                             genre profile — so the model instead differentiates locations by <em>which song or
                                 scene</em> they belong to and <em>when</em> they appear on screen.</p>
                     </article>
@@ -107,10 +111,11 @@
                     </article>
                 </div>
                 <div class="notice" style="margin-top:1rem"><strong>Justification:</strong> the two themes sit at
-                    opposite ends of how this same city has actually been pictured. Noir Case File, heavily inspired by one of my favorite games being LA Noir, treats Los Angeles
+                    opposite ends of how this same city has actually been pictured. Noir Case File, heavily inspired by one of my favorite games being L.A. Noire, treats Los Angeles
                     the way an early-20th-century evidence dossier or archive print would: grayscale, hard rectangles,
-                    a single rubber-stamp red, typewriter data, everything pinned to a strict left edge. Technicolor
-                    Musical instead takes the film's own onscreen register — the twilight-purple-into-sunset-orange sky
+                    a single rubber-stamp red, typewriter data, everything pinned to a strict left edge. 
+                    The aim was to create the feeling of a detective discovering each location, and going through the data.
+                    Technicolor Musical instead takes the film's own onscreen register — the twilight-purple-into-sunset-orange sky
                     of its poster, gold starlight, soft rounded frames — and lets it govern rounded corners, centered
                     composition and a warm gradient wash rather than just a swapped color variable. The two are
                     deliberately opposite on every axis (monochrome vs. color, hard-edged vs. rounded, left-bound vs.
@@ -175,8 +180,9 @@
             <section class="section">
                 <h2>6. Exact location and camera orientation register</h2>
                 <p class="notice"><strong>Coordinates are estimates.</strong> They were reconstructed from the named
-                    street addresses in each source and general geographic knowledge, not measured directly. Verify each
-                    pair against Google Maps before final submission or printing on the site.</p>
+                    street addresses in each source and general geographic knowledge, not measured directly. If you check
+                the same Google Maps location, depending on the year, official address, and the device used, you will find
+            that the information online is inconsistenct. </p>
                 <div style="overflow:auto">
                     <table class="metadata">
                         <tr>
@@ -301,11 +307,11 @@
             </section>
             <section class="section">
                 <h2>8. Image and copyright strategy</h2>
-                <p>Copyrighted film stills are not bundled. Each location has an original SVG orientation illustration,
-                    created for
-                    this project and labelled as a shot guide. For final publication, add your own field photography or
-                    properly licensed images to that location's photo gallery, and preserve captions and source
-                    information.</p>
+                <p>Images were initially selected to show different angles of the same location since finding
+                     the exact shot or a one-to-one version of the image could prove to be challenging. Ultimately,
+                     in order not to overcomplicate the project, only a few meaningful pictures were selected. 
+                     Hence, the gallery array was designed. Further information regarding image copyright can be 
+                     found in the disclaimer section.  </p>
             </section>
             <section class="section">
                 <h2>9. Photo gallery model</h2>
@@ -323,11 +329,8 @@
                     </article>
                     <article class="doc-card">
                         <h3>Camera-match guide stays separate</h3>
-                        <p>The original SVG orientation illustration (the "shot guide") is kept as its own element next
-                            to the
-                            gallery, since it serves a different purpose: it is a diagram of camera direction, not
-                            documentary
-                            evidence, so it should not be mixed into the pile of real photographs.</p>
+                        <p>An original SVG orientation illustration (the "shot guide") was created using LLMs to 
+                            be used as a placeholder for a better visualization at earlier stages. </p>
                     </article>
                     <article class="doc-card">
                         <h3>Why not a fixed two-image comparison</h3>
@@ -338,6 +341,16 @@
                             multiple film appearances existed. The gallery model removes that constraint entirely.</p>
                     </article>
                 </div>
+            </section>
+             <section class="section">
+                <h2>10. Use of LLMs</h2>
+                <p>This project benefited significantly from the use of Large Language Models (LLMs), specifically Claude and DeepSeek. Claude was employed to generate a rough structural prototype of the entire website. Through careful, iterative prompting, nearly every section was revised—either entirely or partially—to meet evolving requirements.
+
+As this was a solo endeavor, AI played a crucial role across almost all processes. For instance, while the core color palette and geometric shapes were chosen by the developer, Claude handled the sophisticated shading and gradient refinements. DeepSeek, on the other hand, was instrumental in debugging, creating and editing new functions, and ensuring the overall smoothness and performance of the final build.
+
+Had it not been for these incredible artificial companions, the creative freedom I enjoyed within such a tight timeframe would have been impossible to achieve. I fully embrace their use and consider them essential collaborators in this workflow. 
+            
+              </p>
             </section>
         </div>
     </main>

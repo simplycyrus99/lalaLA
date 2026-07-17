@@ -12,7 +12,7 @@ window.LMML_DATA = {
   "locations": [
     {
       "id": "traffic-interchange",
-      "title": "The Opening Freeway",
+      "title": "Harbor Freeway → Century Freeway Interchange (110/105 connector ramp)",
       "short": "Another Day of Sun",
       "address": "11600 S Main St, Los Angeles, CA 90061",
       "lat": 33.9302653,
@@ -52,7 +52,7 @@ window.LMML_DATA = {
     },
     {
       "id": "courtyard-apartments",
-      "title": "Mia's Courtyard Apartments",
+      "title": "Rose Towers (formerly the El Cordova Apartments), Long Beach",
       "short": "Someone in the Crowd, part 1",
       "address": "1728 E. 3rd St, Long Beach, CA 90802",
       "lat": 33.7701,
@@ -98,7 +98,7 @@ window.LMML_DATA = {
 },
     {
       "id": "hollywood-murals",
-      "title": "The Long Walk Home",
+      "title": "Hollywood Mural Walk (Vine St / Argyle Ave / Wilcox Ave)",
       "short": "Mia's route past two Hollywood murals",
       "address": "Vine St & Argyle Ave, then 1661 Wilcox Ave, Hollywood, CA",
       "lat": 34.1016,
@@ -138,7 +138,7 @@ window.LMML_DATA = {
 },
     {
       "id": "smoke-house",
-      "title": "Lipton's (The Smoke House)",
+      "title": "The Smoke House Restaurant, Burbank",
       "short": "Where Mia first hears Sebastian play",
       "address": "4420 W Lakeside Dr, Burbank, CA 91505",
       "lat": 34.1455215,
@@ -178,7 +178,7 @@ window.LMML_DATA = {
 },
       {
   "id": "warner-bros-backlot",
-  "title": "Walking Between the Sound Stages",
+  "title": "Warner Bros. Studios Backlot (Avenue D)",
   "short": "The studio tour, and the 'I hate jazz' scene",
   "address": "4000 Warner Blvd, Burbank, CA 91522",
   "lat": 34.1476764,
@@ -219,7 +219,7 @@ window.LMML_DATA = {
 },
     {
       "id": "lighthouse-cafe",
-      "title": "The Lighthouse Jazz Club",
+      "title": "The Lighthouse Cafe, Hermosa Beach",
       "short": "Sebastian's jazz education",
       "address": "30 Pier Ave, Hermosa Beach, CA 90254",
       "lat": 33.8618245,
@@ -259,7 +259,7 @@ window.LMML_DATA = {
     },
     {
       "id": "hermosa-pier",
-      "title": "The Pier",
+      "title": "Hermosa Beach Pier",
       "short": "City of Stars",
       "address": "1100 Hermosa Ave, Hermosa Beach, CA 90254",
       "lat": 33.8617821,
@@ -382,7 +382,7 @@ window.LMML_DATA = {
     },
     {
       "id": "griffith-observatory",
-      "title": "The Observatory",
+      "title": "Griffith Observatory",
       "short": "The Planetarium waltz",
       "address": "2800 E Observatory Rd, Los Angeles, CA 90027",
       "lat": 34.1184341,
@@ -424,7 +424,7 @@ window.LMML_DATA = {
     },
     {
       "id": "cathys-corner",
-      "title": "The Hilltop View",
+      "title": "Cathy's Corner, Griffith Park",
       "short": "A Lovely Night",
       "address": "Mount Hollywood Dr (near Cathy's Corner), Griffith Park, Los Angeles, CA",
       "lat": 34.139241,
@@ -469,7 +469,7 @@ window.LMML_DATA = {
     },
     {
       "id": "jar-restaurant",
-      "title": "The Restaurant Escape",
+      "title": "Jar Restaurant, Beverly Grove",
       "short": "Mia bolts from a bad date",
       "address": "Beverly Blvd & N San Vicente Blvd, Los Angeles, CA 90048",
       "lat": 34.0761927,
@@ -510,7 +510,7 @@ window.LMML_DATA = {
     },
     {
       "id": "colorado-street-bridge",
-      "title": "The Bridge at Sunset",
+      "title": "Colorado Street Bridge",
       "short": "Summer Montage, part 2",
       "address": "W Colorado Blvd & Terrace Dr, Pasadena, CA 91105",
       "lat": 34.1445705,
@@ -550,7 +550,7 @@ window.LMML_DATA = {
     },
     {
       "id": "grand-central-market",
-      "title": "The Food Hall",
+      "title": "Grand Central Market",
       "short": "Summer Montage, part 3",
       "address": "317 S Broadway, Los Angeles, CA 90013",
       "lat": 34.050872,
@@ -591,7 +591,7 @@ window.LMML_DATA = {
     },
     {
       "id": "elysian-park-palms",
-      "title": "The Palm Trees",
+      "title": "Elysian Park (Angels Point palms)",
       "short": "Summer Montage, part 5",
       "address": "1000 Vin Scully Ave, Los Angeles, CA 90012",
       "lat": 34.0861447,
