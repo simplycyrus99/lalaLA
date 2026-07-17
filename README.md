@@ -14,26 +14,6 @@ A complete static LMML (Live Museum of Movie Locations) website for the Informat
 - JSON and CSV data
 - About, documentation and disclaimer pages
 
-## Run locally
-
-Open `index.html` directly, or run:
-
-```bash
-python -m http.server 8000
-```
-
-Then visit `http://localhost:8000`.
-
-## Before submission
-
-1. Replace `[Add your team name]` and your details in `about.html` and `data/locations.json` (`project.team`).
-2. Replace the placeholder GitHub Pages URL (`SITE_URL` in `tools/regenerate_qr.py`), then run the script to regenerate QR codes.
-3. Add your own on-site photographs or properly licensed images to each location's `gallery` array in `data/locations.json`. The included SVGs are original angle guides, not film stills or gallery photos.
-4. Verify the coordinates in `data/locations.json` against Google Maps — they were reconstructed from street addresses, not measured directly.
-5. Add the specific seeing-stars.com page URL for each location to its `sources` array (only the index page was used while compiling this data — see `disclaimer.html`).
-6. Re-check venue access, route time and opening hours — one stop (Warner Bros. backlot) requires a booked studio tour, one (the Rialto Theatre) is currently closed to the public, and one (Cathy's Corner) is a real hike on a car-free road.
-7. Push the folder to a GitHub repository and enable GitHub Pages from the repository root.
-
 ## Main structure
 
 - `index.html` cover page
