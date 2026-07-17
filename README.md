@@ -1,6 +1,6 @@
 # La La L.A.
 
-A complete static LMML (Live Museum of Movie Locations) website for the Information Modeling and Web Technologies course, A.Y. 2024-25 — **LA Through the Eyes of La La Land**, a single-film location tour of Damien Chazelle's *La La Land* (2016).
+A complete static LMML (Live Museum of Movie Locations) website for the Information Modeling and Web Technologies course, A.Y. 2025-26 — **LA Through the Eyes of La La Land**, a single-film location tour of Damien Chazelle's *La La Land* (2016).
 
 ## Included
 
